@@ -1,0 +1,465 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 0.5rem 1.5rem;
+  align-items: center;
+  background: linear-gradient(
+    36deg,
+    rgb(0, 153, 255),
+    rgb(42, 130, 154),
+    rgb(64, 172, 196)
+  );
+  z-index: 1;
+  box-shadow: 0px 5px 80px rgb(137, 137, 137);
+}
+.text-hearder {
+  font-size: 50px;
+  font-weight: bold;
+  background: linear-gradient(#ff7e5f, #feb47b); /* Màu nền gradient */
+  -webkit-background-clip: text; /* Cắt nền theo chữ */
+  -webkit-text-fill-color: transparent; /* Làm chữ trong suốt để lộ nền */
+}
+.bar {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.bar li {
+  position: relative;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+}
+.bar li::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+}
+.bar li:hover::after {
+  bottom: 0;
+  left: 0;
+  background-color: rgb(102, 70, 197);
+  width: 100%;
+  transition: width 1s 0s ease-out;
+}
+.bar li:hover {
+  color: rgb(102, 70, 197);
+}
+.icon i {
+  font-size: x-large;
+  margin-right: 10px;
+}
+.sierbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 2;
+  background-color: white;
+  overflow: auto;
+  width: 18rem;
+  transition: width 0.1s;
+}
+.header-sierbar {
+  display: flex;
+  justify-content: end;
+  font-size: x-large;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+  gap: 15px;
+  margin-right: 10px;
+}
+.nav-bar-section {
+  display: flex;
+
+  flex-direction: column;
+}
+.bar-car-setion {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  padding: 1.5rem 1.5rem;
+  list-style: none;
+}
+.bar-car-setion li {
+  display: flex;
+  flex: 1;
+  padding: 10px 2rem;
+  border-radius: 10px;
+}
+.bar-car-setion li:hover {
+  background-color: rgb(206, 203, 203);
+  color: rgb(23, 26, 189);
+}
+.sierbar-none {
+  width: 0;
+}
+.main {
+  margin-top: 85px;
+  background: linear-gradient(
+    -36deg,
+    rgb(0, 2, 16),
+    rgb(68, 8, 151),
+    rgb(134, 105, 219),
+    rgb(152, 142, 205),
+    rgb(188, 148, 222)
+  );
+}
+img {
+  height: 85vh;
+
+  width: 185vh;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.car-parent {
+  padding: 10px 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  background-color: rgb(40, 113, 183);
+}
+.car-parent i {
+  font-size: xx-large;
+  border-radius: 50px;
+  padding: 10px 15px;
+  background-color: rgb(153, 154, 154);
+}
+.car-parent i:hover {
+  background-color: lightsteelblue;
+}
+.car-img {
+  position: relative;
+}
+.car-img h1 {
+  position: absolute;
+  top: 0;
+  font-weight: bold;
+  font-size: xx-large;
+  text-transform: uppercase;
+  background-color: #c3916a;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.car-parent-text {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.car-parent-text i {
+  font-size: xx-large;
+  border-radius: 50px;
+  padding: 10px 15px;
+  background-color: rgb(153, 154, 154);
+}
+.car-parent-text i:hover {
+  background-color: lightsteelblue;
+}
+.table-children {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+tbody {
+  display: flex;
+  flex-direction: column;
+}
+.table-children tr,
+td,
+th {
+  gap: 30px;
+  font-size: x-large;
+  display: flex;
+  flex: 1;
+  color: white;
+  background: #ff7e5f;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.button-children {
+  display: flex;
+  width: 50vh;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+.buy {
+  position: relative;
+  margin-right: 10px;
+  padding: 0rem 2.5rem;
+  color: white;
+  font-size: large;
+  border: 1px solid rgb(39, 105, 218);
+  color: rgb(39, 105, 218);
+  background-color: white;
+  border-radius: 5px;
+}
+.buy::before {
+  position: absolute;
+  content: "Mua xe";
+  color: white;
+  font-size: large;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0px;
+  background-color: rgb(39, 105, 218);
+  border-radius: 3px;
+}
+
+.buy:hover::before {
+  content: "";
+  width: 0;
+  transition: all 0.3s linear;
+}
+.test {
+  position: relative;
+  margin-right: 10px;
+  padding: 0rem 2.5rem;
+  color: white;
+  font-size: large;
+  border: 1px solid rgb(39, 105, 218);
+  color: rgb(39, 105, 218);
+  background-color: white;
+  border-radius: 5px;
+}
+.test::before {
+  position: absolute;
+  content: "Tìm hiểu thêm";
+  color: white;
+  font-size: large;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0px;
+  background-color: rgb(39, 105, 218);
+  border-radius: 3px;
+}
+.test:hover::before {
+  content: "";
+  width: 0;
+  transition: all 0.3s linear;
+}
+.card-none {
+  display: none;
+}
+.card-cars-animation {
+  animation: na 1s 0s ease-in-out;
+}
+@keyframes na {
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.from-card {
+  padding: 2rem 1rem;
+  background: linear-gradient(
+    36deg,
+    rgb(225, 14, 225),
+    rgb(230, 43, 230),
+    rgb(225, 82, 225),
+    rgb(212, 118, 212),
+    rgb(211, 143, 211)
+  );
+}
+.from-group {
+  position: relative;
+  width: 300px;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  padding: 0 5px;
+  color: #aaa;
+  font-size: 16px;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+input:focus {
+  border-color: #007bff;
+}
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -4px;
+  font-size: 12px;
+  color: #007bff;
+}
+.login button {
+  width: 100%;
+  padding: 0.5rem 0rem;
+  background-color: #007bff;
+  border: none;
+  font-size: large;
+  font-weight: 600;
+  color: white;
+  border-radius: 3px;
+}
+.sucesses,
+.button-register {
+  margin-bottom: 2rem;
+}
+.login button:hover {
+  box-shadow: 5px -5px 30px inset rgb(45, 76, 202);
+}
+.from-btton {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0rem;
+  gap: 10px;
+}
+.from-btton button {
+  padding: 0.5rem 0.5rem;
+  color: white;
+  font-size: larger;
+  font-weight: 500;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(109, 106, 106);
+}
+.from-children {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  width: 25rem;
+  height: 25rem;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: -5px 5px 30px rgb(102, 70, 197);
+}
+.from-card button:hover {
+  cursor: pointer;
+  box-shadow: -5px 5px 30px rgb(116, 173, 190);
+}
+.from-none {
+  display: none;
+}
+.card-parent-two {
+  display: flex;
+  flex-direction: row;
+  gap: 0px 10px;
+}
+.card-children-two img {
+  height: 23rem;
+  width: 60rem;
+}
+.card-children-column-alone img {
+  height: 47rem;
+  width: 32rem;
+}
+.card-children-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-parent-two {
+  padding: 0.7rem 1rem;
+}
+.card-children-two {
+  position: relative;
+}
+article {
+  position: absolute;
+  height: 0rem;
+  top: 10px;
+  left: 30px;
+  font-size: x-large;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+.card-children-two:hover article {
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
+}
+.card-children-column-alone {
+  position: relative;
+}
+.card-children-column-alone div {
+  position: absolute;
+  color: #ffffff;
+  top: 10px;
+  padding: 10px 20px;
+  opacity: 0;
+  font-size: x-large;
+}
+.card-children-column-alone:hover div {
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: black;
+}
+.footer-links li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+.footer-links a:hover {
+  color: #007bff;
+}
+.footer-bottom {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+@media (max-width: 1368px) {
+  img {
+    height: 10rem;
+    width: 40rem;
+  }
+}
